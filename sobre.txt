@@ -1,0 +1,45 @@
+configurar conexao com postgres
+-------------------------------
+- conectar no schema: shared
+
+====================================================================
+
+signUp:
+-------
+- pegar dados da inscricao da empresa (gravar na tabela: company)
+  . company_name
+  . email
+  . sub_domain
+
+- enviar link por email, para ativar a conta:
+  . alterar campo 'active' = true, na tabela: company
+  . criar user:    
+	. email: o mesmo informado anteriormente	
+	. password: senha informada pelo usuario 
+	. confirmPassword: repete a senha
+	. name: Admin
+	. admin: true
+	. company_id: buscar em "company" atraves do email
+	. schema: gerar nome: 'schema-' + company_id
+  .criar schema
+	. criar schema com o nome gerado pela api
+	. executar migrations e seeders
+
+----> verificar como criar um schema na api 
+----> verificar como executar migrations e seeders
+
+singnIn:
+--------
+  . passar: email e password
+  . api busca em "shared.user", qual o schema disponivel
+  . faz o login com JWT
+  
+sendEmail:
+----------
+  . procurar funcao para enviar email
+  . tipos de email: 
+	. signIn: link para página de cadastro de usuario
+	. forgotPass: link para a página de recuperação de senha 
+  
+=======================================================================
+

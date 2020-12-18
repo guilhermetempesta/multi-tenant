@@ -1,0 +1,33 @@
+{
+  "name": "multi-tenant",
+  "version": "1.0.0",
+  "description": "API Multi Tenant Example",
+  "main": "src/server.js",
+  "scripts": {
+    "web": "node src/server.js",
+    "start": "nodemon",
+    "production": "pm2 start src/server.js --name multi-tenant"
+  },
+  "keywords": [],
+  "author": "Guilherme Lorenzon Tempesta",
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.19.0",
+    "consign": "^0.1.6",
+    "cors": "^2.8.5",
+    "date-fns": "^2.16.1",
+    "date-fns-tz": "^1.0.10",
+    "express": "^4.17.1",
+    "jwt-simple": "^0.5.6",
+    "passport": "^0.4.1",
+    "passport-jwt": "^4.0.0",
+    "pg": "^8.3.0",
+    "pm2": "^4.4.0",
+    "sequelize": "^6.3.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6",
+    "sequelize-cli": "^6.2.0"
+  }
+}
