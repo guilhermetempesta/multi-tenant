@@ -4,7 +4,6 @@ module.exports = app => {
 
     app.post('/signup', app.src.controllers.AccountController.signup)
     app.post('/signin', app.src.controllers.auth.signin)
-    // app.post('/validadeToken', app.src.controllers.AuthController.validateToken)
        
     app.route('/users')
         .all(app.src.config.passport.authenticate())
@@ -16,27 +15,20 @@ module.exports = app => {
         .get(admin(app.src.controllers.UserController.getById))
         .put(admin(app.src.controllers.UserController.update))
         .delete(admin(app.src.controllers.UserController.remove))
-/*
-    app.route('/municipios')
+ 
+    app.route('/cities')
         .all(app.src.config.passport.authenticate())
-        .get(app.src.controllers.MunicipioController.get)
-        .post(app.src.controllers.MunicipioController.save)
+        .get(app.src.controllers.CityController.get)
     
-    app.route('/municipios/:id')
+    app.route('/cities/:id')
         .all(app.src.config.passport.authenticate())
-        .get(app.src.controllers.MunicipioController.getById)
-        .put(app.src.controllers.MunicipioController.save)
-        .delete(app.src.controllers.MunicipioController.remove)
-
-    app.route('/bancos')
-        .all(app.src.config.passport.authenticate())
-        .get(app.src.controllers.BancoController.get)
-        .post(app.src.controllers.BancoController.save)
+        .get(app.src.controllers.CityController.getById)
     
-    app.route('/bancos/:id')
+    app.route('/banks')
         .all(app.src.config.passport.authenticate())
-        .get(app.src.controllers.BancoController.getById)
-        .put(app.src.controllers.BancoController.save)
-        .delete(app.src.controllers.BancoController.remove)
-*/
+        .get(app.src.controllers.BankController.get)
+    
+    app.route('/banks/:id')
+        .all(app.src.config.passport.authenticate())
+        .get(app.src.controllers.BankController.getById)
 }

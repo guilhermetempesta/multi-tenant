@@ -6,7 +6,7 @@ class City extends Model {
             name: DataTypes.STRING,
             state: DataTypes.STRING,
             code: DataTypes.STRING,
-            deleted_at: DataTypes.DATE
+            deletedAt: DataTypes.DATE
         }, {
            sequelize,
            tableName: 'cities'
