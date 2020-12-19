@@ -1,5 +1,4 @@
 const dbRepo = require('../models');
-const db = require('../database/index')
 const bcrypt = require('bcrypt-nodejs')
 
 const validate = (user) => {

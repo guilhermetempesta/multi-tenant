@@ -24,15 +24,7 @@ const validate = async (account) => {
             }
         })
         if (emailExists) { throw 'Este e-mail já está sendo utilizado!' }
-
-        // const subDomainExists = await Account.findOne({ 
-        //     where: { 
-        //         subDomain: account.subDomain, 
-        //         deletedAt: null,
-        //     }
-        // })
-        // if (subDomainExists) { throw 'Este Sub-domínio já está sendo utilizado!' }
-    
+   
     } catch(err) {            
         throw err
     }
@@ -94,8 +86,6 @@ const signup = async (body) => {
         
     } catch (err) {
         throw err
-    } finally {
-        // dbConnector.addSequelizeConnectionToRepo(dbRepo, 'default')
     }
 }
 
