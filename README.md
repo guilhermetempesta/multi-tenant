@@ -16,10 +16,10 @@
 	- [x] inscrever-se (Account)
 	- [x] criar schema (PostgreSQL)
 	- [x] criar Usuário (User) 
-- [ ] Login, autorização e autenticação
-- [ ] CRUD de Usuário (User)
-- [ ] Listar Municípios (City)
-- [ ] Listar Bancos (Bank)
+- [x] Login, autorização e autenticação
+- [x] CRUD de Usuário (User)
+- [x] Listar Municípios (City)
+- [x] Listar Bancos (Bank)
 
 
 ### Pré-requisitos
